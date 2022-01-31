@@ -1,0 +1,23 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.border {
+    border: 1px solid darkslategray;
+}
+
+.rounded {
+    border-radius: 9px;
+    padding: 9px;
+}
+
+.LiturgyOfTheDayInner {
+    border: 2px solid lightgray;
+    padding: 9px;
+    border-radius: 9px;
+}
+
+.LiturgyOfTheDayFestivityName {
+    font-size: 1.2em;
+}
