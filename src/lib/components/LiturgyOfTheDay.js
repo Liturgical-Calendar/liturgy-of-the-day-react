@@ -97,12 +97,11 @@ const LiturgyOfTheDay = ({
         return t('Proper');
     }
     else {
-        let commons = common.split(",");
-        commons = commons.map(txt => {
-            let common = txt.split(":");
-            if( universalCommons.includes(common[0]) ) {
-              let commonGeneral = t(common[0].replaceAll(' ', '-'));
-              let commonSpecific = (typeof common[1] !== 'undefined' && common[1] != "") ? commonsMap[(common[1].replaceAll(' ', '-'))] : "";
+        let commons = common.map(txt => {
+            let commonFull = txt.split(":");
+            if( universalCommons.includes(commonFull[0]) ) {
+              let commonGeneral = t(commonFull[0].replaceAll(' ', '-'));
+              let commonSpecific = (typeof commonFull[1] !== 'undefined' && commonFull[1] != "") ? commonsMap[(commonFull[1].replaceAll(' ', '-'))] : "";
               let commonKey = '';
               //txt = str_replace(":", ": ", txt);
               switch (commonGeneral) {
@@ -224,7 +223,7 @@ const LiturgyOfTheDay = ({
               }
             }
           }>{lclzdGrade}</GradeWrapper> : '');
-        const eventDataColor = eventData.color.split(',');
+        const eventDataColor = eventData.color;
         return <div 
           className={joinClassNames('LiturgyOfTheDayInner',LiturgyOfTheDayInnerClassnames)}
           style={LiturgicalColorAsBG ? {
