@@ -1,0 +1,59 @@
+{
+  "name": "liturgy-of-the-day",
+  "version": "0.1.0",
+  "description": "Liturgy of the Day component",
+  "keywords": [
+    "react",
+    "liturgy",
+    "catholic",
+    "saint"
+  ],
+  "author": "John R. D'Orazio <priest@johnromanodorazio.com> (https://litcal.johnromanodorazio.com)",
+  "private": false,
+  "browser": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Liturgical-Calendar/liturgy-of-the-day-react.git"
+  },
+  "homepage": "https://litcal.johnromanodorazio.com",
+  "bugs": {
+    "url": "https://github.com/Liturgical-Calendar/liturgy-of-the-day-react/issues",
+    "email": "priest@johnromanodorazio.com"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@babel/polyfill": "^7.17.9",
+    "i18next": "^21.6.10",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-i18next": "^11.15.3",
+    "react-scripts": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/runtime": "7.13.8",
+    "i18next-scanner": "^3.1.0",
+    "typescript": "4.1.3"
+  },
+  "scripts": {
+    "start": "export HTTPS=true&&SSL_CRT_FILE=certs/server.cert&&SSL_KEY_FILE=certs/server.key&&HOST=liturgyoftheday.com react-scripts start",
+    "buildApp": "react-scripts build",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
