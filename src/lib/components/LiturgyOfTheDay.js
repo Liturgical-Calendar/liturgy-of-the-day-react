@@ -28,8 +28,7 @@ i18n.use(initReactI18next).init({
   fallbackLng: 'en',
   resources,
   react: {
-    wait: true,
-    useSuspense: false,
+    useSuspense: true,
  },
 });
 
@@ -135,7 +134,7 @@ const LiturgyOfTheDay = ({
   const EventColors = ({colors}) => {
     return (
       <div>
-        <i>{t('liturgical color:')} </i>
+        <i>{t('liturgical-color')}: </i>
         {colors.map((tColor,i) => {
           if(i === 0){
             return <span key={i}><i style={{display:'inline-block',height:'1em',width:'1em',backgroundColor:tColor,border:'1px solid gray',margin:'0 6px',verticalAlign:'bottom'}}></i>{translColor[tColor]}</span>

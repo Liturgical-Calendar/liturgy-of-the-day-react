@@ -49,6 +49,12 @@
     "SOLEMNITY": "SOLENNITÀ",
     "Optional-memorial": "Memoria facoltativa",
     "FEAST-OF-THE-LORD": "FESTA DEL SIGNORE",
-    "Liturgy-of-the-Day": "Liturgia del giorono",
-    "Commemoration": "Commemorazione"
+    "Liturgy-of-the-Day": "Liturgia del giorno",
+    "Commemoration": "Commemorazione",
+    "liturgical-color": "colore liturgico",
+    "white": "bianco",
+    "red": "rosso",
+    "green": "verde",
+    "purple": "viola",
+    "pink": "rosa"
 }
