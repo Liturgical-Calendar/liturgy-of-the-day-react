@@ -9,7 +9,6 @@
     "saint"
   ],
   "author": "John R. D'Orazio <priest@johnromanodorazio.com> (https://litcal.johnromanodorazio.com)",
-  "private": false,
   "browser": "dist/index.js",
   "module": "dist/index.js",
   "files": [
@@ -55,5 +54,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "packageManager": "yarn@4.4.1"
 }

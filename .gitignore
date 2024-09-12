@@ -1,3 +1,12 @@
-node_modules
 build
 certs
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+//when using zero installs, you would
+//- .pnp.*
+//+ !.yarn/cache
