@@ -9,7 +9,5 @@ Object.defineProperty(exports, "LiturgyOfTheDay", {
     return _LiturgyOfTheDay.default;
   }
 });
-
 var _LiturgyOfTheDay = _interopRequireDefault(require("./components/LiturgyOfTheDay"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }

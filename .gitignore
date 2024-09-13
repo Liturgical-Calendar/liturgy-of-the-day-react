@@ -10,3 +10,4 @@ certs
 //when using zero installs, you would
 //- .pnp.*
 //+ !.yarn/cache
+node_modules/

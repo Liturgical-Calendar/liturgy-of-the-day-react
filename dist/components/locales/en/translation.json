@@ -50,5 +50,11 @@
     "Optional-memorial": "Optional memorial",
     "FEAST-OF-THE-LORD": "FEAST OF THE LORD",
     "Liturgy-of-the-Day": "Liturgy of the Day",
-    "Commemoration": "Commemoration"
+    "Commemoration": "Commemoration",
+    "liturgical-color": "liturgical color",
+    "white": "white",
+    "red": "red",
+    "green": "green",
+    "purple": "purple",
+    "pink": "pink"
 }
