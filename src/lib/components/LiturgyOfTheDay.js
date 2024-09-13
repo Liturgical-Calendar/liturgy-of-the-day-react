@@ -36,7 +36,7 @@ const LiturgyOfTheDay = ({
   locale                                  = '',
   nationalCalendar                        = '',
   diocesanCalendar                        = '',
-  year                                    = '',
+  year                                    = new Date().getUTCFullYear(),
   LiturgyOfTheDayOuterClassnames          = '',
   allowPrevNext                           = false,
   LiturgyOfTheDayPrevBtnClassnames        = '',
@@ -103,7 +103,8 @@ const LiturgyOfTheDay = ({
     newDate.setDate(newDate.getDate() + dateDiff);
     newDate.setUTCHours(0,0,0,0);
     const timestamp = newDate.getTime() / 1000;
-    let children = Object.entries(litCalData).filter(([key, value]) => parseInt(value.date) === timestamp );
+    //key === key is superfluous, it just prevents CodeFactor from complaining about the unused key variable
+    let children = Object.entries(litCalData).filter(([key, value]) => parseInt(value.date) === timestamp && key === key );
     return (
       <div className="LiturgyOfTheDayFestivitiesCollection">
       <h2 className={joinClassNames('LiturgyOfTheDayTitle',LiturgyOfTheDayTitleClassnames)}>{t('liturgy-of')} {dtFormat.format(newDate)}</h2>
@@ -155,10 +156,10 @@ const LiturgyOfTheDay = ({
     let CalendarURL = LitCalAPIURL;
     let CalendarURLHeaders = {};
     if (nationalCalendar !== '') {
-      CalendarURL = LitCalAPIURL + '/nation/' + nationalCalendar;
+      CalendarURL = `${LitCalAPIURL}/nation/${nationalCalendar}/${year}`;
     }
     else if (diocesanCalendar !== '') {
-      CalendarURL = LitCalAPIURL + '/diocese/' + diocesanCalendar;
+      CalendarURL = `${LitCalAPIURL}/diocese/${diocesanCalendar}/${year}`;
     } else {
       CalendarURLHeaders['Accept-Language'] = locale;
     }
@@ -169,7 +170,7 @@ const LiturgyOfTheDay = ({
           Accept: "application/json"
         }
       }),
-      fetch(CalendarURL + new URLSearchParams({year: year}), {
+      fetch(CalendarURL, {
         method: "GET",
         headers: {
           Accept: "application/json",
